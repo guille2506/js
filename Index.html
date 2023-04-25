@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Creo los 3 arreglos (uno para los meses, otro para el numero del mes, y el ultimo para la cantidad de dias que tiene el mes)
+        let Meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+        let NumMes = ["1","2","3","4","5","6","7","8","9","10","11","12"];
+        let CantDiasMes = ["31","28","31","30","31","30","31","31","30","31","30","31"];
+
+        // Creo una funcion para mostrar todo
+        function Mostrar(){
+            // Creo un bucle for para recorrer los arreglos y poder mostrar los resultados
+            for(i=0;i<=Meses.length-1;i++){
+                // Creo un condicional if para poder filtrar los meses segun su numero de mes entre "meses pares o menses impares"
+                if((NumMes[i] % 2)==0){
+                    document.write("<b style = 'color: green'>Mes: "+ Meses[i]+ "["+NumMes[i]+"] tiene " + CantDiasMes[i] + " dias</d> <br>");
+                        /* 
+                        Lo de arriba es para poder escribir en la pagina el siguiente resultado(usando de ejemplo el mes de Enero):
+                        Mes: Enero[1] tiene 31 dias
+                        (todo en verde)
+                        */
+                }else{
+                    document.write("<b style = 'color: red'>Mes: "+ Meses[i]+ "["+NumMes[i]+"] tiene " + CantDiasMes[i] + " dias</d> <br>");
+                        /* 
+                        Lo de arriba es para poder escribir en la pagina el siguiente resultado(usando de ejemplo el mes de Enero):
+                        Mes: Enero[1] tiene 31 dias
+                        (todo en rojo)
+                        */
+                }
+            }
+        }
+
+        // Llamo la funcion creada
+        Mostrar();
+    </script>
+</body>
+</html>
